@@ -8,8 +8,6 @@
         </script>
     </head>
     <body>
-        teste
-        teste32
         Go to <a href="pages/index.html">/pages/index.html</a>
     </body>
 </html>
