@@ -12,11 +12,13 @@ telefone2
 site
 
 idFinalidade venda/aluguel
-idTipo Apartamento/�rea Industrial/Casa/Cobertura/Galp�o/Kitnet/Ponto Comercial/Pr�dio Comercial/Sala Comercial/S�tio/Sobrado/Terreno
+idTipo Apartamento/Area Industrial/Casa/Cobertura/Galpao/Kitnet/Ponto Comercial/Pr�dio Comercial/Sala Comercial/Sitio/Sobrado/Terreno
 dormitorios
 suites
 banheiros
 garagem
+
+imgDir
 
 dataCadastro
 dataEdicao
