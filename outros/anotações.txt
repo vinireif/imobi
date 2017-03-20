@@ -1,0 +1,25 @@
+id
+descricao
+cep
+endereco
+lat
+lon
+valor
+
+emailContato
+telefone1
+telefone2
+site
+
+idFinalidade venda/aluguel
+idTipo Apartamento/Area Industrial/Casa/Cobertura/Galpao/Kitnet/Ponto Comercial/Pr�dio Comercial/Sala Comercial/Sitio/Sobrado/Terreno
+dormitorios
+suites
+banheiros
+garagem
+
+imgDir
+
+dataCadastro
+dataEdicao
+ativo 1/0
