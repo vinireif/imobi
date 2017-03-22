@@ -31,81 +31,129 @@
                         <div class="col col-lg-12">
                             <h1 class="page-header">Cadastrar Imóvel</h1>
                         </div>
-                        <div class="col col-lg-6 col-md-12 col-sm-12">
-                            <label for="sel1">Finalidade:</label>
-                            <select class="form-control" id="sel1">
-                                <?php
-                                $result = mysqli_query($conexao, "SELECT descricao FROM finalidade");
-                                while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
-                                    echo "<option>$row[0]</option>";
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <br>
-                        <div class="col col-lg-6 col-md-12 col-sm-12">
-                            <label for="sel1">Tipo:</label>
-                            <select class="form-control" id="sel1">
-                                <?php
-                                $result = mysqli_query($conexao, "SELECT descricao FROM tipo");
-                                while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
-                                    echo "<option>$row[0]</option>";
-                                }
-                                ?>
-                            </select>
-                        </div>
-                        <div class="col col-lg-12 col-md-12 col-sm-12">
+                        <form action="#" method="POST">
+                            <div class="col col-lg-6 col-md-12 col-sm-12">
+                                <label for="sel1">Finalidade:</label>
+                                <select class="form-control" id="sel1">
+                                    <?php
+                                    $result = mysqli_query($conexao, "SELECT descricao FROM finalidade");
+                                    while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+                                        echo "<option>$row[0]</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
                             <br>
-                            <label for="sel1">Título:</label>
-                            <input class="form-control" name="titulo" placeholder="Insira um título">
-                        </div>
-                        <div class="col col-lg-12 col-md-12 col-sm-12">
-                            <br>
-                            <label for="sel1">Descrição:</label>
-                            <textarea class="form-control" name="descricao" placeholder="Descreva o imóvel"></textarea>
-                        </div>
+                            <div class="col col-lg-6 col-md-12 col-sm-12">
+                                <label for="sel1">Tipo:</label>
+                                <select class="form-control" id="sel1">
+                                    <?php
+                                    $result = mysqli_query($conexao, "SELECT descricao FROM tipo");
+                                    while ($row = mysqli_fetch_array($result, MYSQL_NUM)) {
+                                        echo "<option>$row[0]</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Título:</label>
+                                <input class="form-control" name="titulo" placeholder="Insira um título">
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Descrição:</label>
+                                <textarea class="form-control" name="descricao" placeholder="Descreva o imóvel"></textarea>
+                            </div>
 
-                        <div class="col col-lg-12 col-md-12 col-sm-12">
-                            <br>
-                            <label for="sel1">Estado:</label>
-                            <select class="form-control" id="estado">
-                                <option value="0">Selecione um Estado</option>
-                                <?php
-                                $result = mysqli_query($conexao, "SELECT id, nome FROM estados");
-                                while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
-                                    echo "<option value='$row[0]'>$row[1]</option>";
-                                }
-                                ?>
-                            </select>
-                        </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Estado:</label>
+                                <select class="form-control" id="estado">
+                                    <option value="0">Selecione um Estado</option>
+                                    <?php
+                                    $result = mysqli_query($conexao, "SELECT id, nome FROM estados");
+                                    while ($row = mysqli_fetch_array($result, MYSQLI_NUM)) {
+                                        echo "<option value='$row[0]'>$row[1]</option>";
+                                    }
+                                    ?>
+                                </select>
+                            </div>
 
-                        <div class="col col-lg-12 col-md-12 col-sm-12">
-                            <br>
-                            <label for="sel1">Cidade:</label>
-                            <select class="form-control" id="cidade">
-                                <option value="0">Selecione uma Cidade</option>
-                                <!-- Ajax -->
-                            </select>
-                        </div>
-                        <div class="col col-lg-12 col-md-12 col-sm-12">
-                            <br>
-                            <label for="sel1">Endereço:</label>
-                            <input id="endereco" class="form-control" name="endereco" placeholder="Informe o endereço">
-                        </div>
-                        <div class="col col-lg-12 col-md-12 col-sm-12">
-                            <br>
-                            <div id="map" style="width: 100%; height: 300px"></div>
-                        </div>
-                        <div class="col col-lg-12 col-md-12 col-sm-12">
-                            <br>
-                            <label for="sel1">Referência:</label>
-                            <input class="form-control" name="referencia" placeholder="Informe uma referencia">
-                        </div>
-                        <div class="col col-lg-12 col-md-12 col-sm-12">
-                            <br>
-                            <label for="sel1">Valor R$:</label>
-                            <input class="form-control" value="0.00" type="number" step="0.01" name="valor" placeholder="">
-                        </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Cidade:</label>
+                                <select class="form-control" id="cidade">
+                                    <option value="0">Selecione uma Cidade</option>
+                                    <!-- Ajax -->
+                                </select>
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Endereço:</label>
+                                <input id="endereco" class="form-control" name="endereco" placeholder="Informe o endereço">
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <div id="map" style="width: 100%; height: 300px"></div>
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Referência:</label>
+                                <input class="form-control" name="referencia" placeholder="Informe uma referencia">
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Valor R$:</label>
+                                <input class="form-control" value="0.00" type="number" step="0.01" name="valor" placeholder="">
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">E-mail para contato:</label>
+                                <input class="form-control" type="email" name="email" placeholder="Informe um e-mail para contato">
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Telefone 1:</label>
+                                <input class="form-control" name="telefone" placeholder="Telefone para contato">
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Telefone 2:</label>
+                                <input class="form-control" name="telefone" placeholder="Telefone para contato">
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Site:</label>
+                                <input class="form-control" name="site" placeholder="Endereços de seu site">
+                            </div>
+                            <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Suites:</label>
+                                <input class="form-control" value="1" type="number" step="1" name="suites" min="0" max="99">
+                            </div>
+                            <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Banheiros:</label>
+                                <input class="form-control" value="1" type="number" step="1" name="banheiros" min="0" max="99">
+                            </div>
+                            <div class="col col-lg-4 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Garagens:</label>
+                                <input class="form-control" value="1" type="number" step="1" name="garagens" min="0" max="99">
+                            </div>
+                            <div class="col col-lg-12 col-md-12 col-sm-12">
+                                <br>
+                                <label for="sel1">Imagens:</label>
+                                <input class="form-control" type="file" name="imagens">
+                            </div>
+                            <div class="col col-lg-6 col-md-12 col-sm-12">
+                                <br>
+                                <input class="btn btn-primary " type="submit" value="Concluir">
+                                <br>
+                                <br>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -156,7 +204,8 @@
             function initMap() {
                 map = new google.maps.Map(document.getElementById('map'), {
                     center: {lat: -34.397, lng: 150.644},
-                    zoom: 8
+                    zoom: 8,
+                    scrollwheel: false
                 });
                 geocoder = new google.maps.Geocoder();
                 marker = new google.maps.Marker({
